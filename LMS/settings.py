@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'crispy_forms',
-    'bootstrap4'
+    'bootstrap4',
     'whitenoise.runserver_nostatic',
 ]
 
