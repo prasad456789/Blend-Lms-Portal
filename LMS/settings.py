@@ -146,7 +146,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Static files will be coll
 
 # Specify where your static assets (CSS, JS, etc.) are located
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')  # Your existing static directory with assets
+    os.path.join(BASE_DIR, 'static','assets')  # Your existing static directory with assets
 ]
 
 # Default primary key field type
