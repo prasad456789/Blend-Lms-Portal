@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'app',
     'crispy_forms',
     'bootstrap4',
+    'whitenoise.runserver_nostatic',
     
 ]
 
@@ -55,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -136,24 +137,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-#STATIC_URL = '/static/'
-#STATIC_ROOT = '/static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = '/static/'
 
-#STATICFILES_DIRS = [
-#    os.path.join(BASE_DIR,'staticfiles')
-#]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'static')
+]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
 
 # Update this to point to your project's staticfiles directory
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Static files will be collected here
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Static files will be collected here
 
 # Specify where your static assets (CSS, JS, etc.) are located
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static','assets')  # Your existing static directory with assets
-]
+#STATICFILES_DIRS = [
+#   os.path.join(BASE_DIR, 'static','assets')  # Your existing static directory with assets
+#]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
