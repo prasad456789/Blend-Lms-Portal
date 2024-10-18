@@ -141,7 +141,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static')
+    os.path.join(BASE_DIR,'static','assets')
 ]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
